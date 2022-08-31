@@ -1,0 +1,602 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* ======================================== General ==================================== */
+
+* {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 12px;
+}
+
+.grid {
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+}
+
+/* =========================================== Header ====================================*/
+
+header {
+  position: sticky;
+  top: 0;
+}
+
+header a {
+  color: white;
+}
+
+.span {
+  display: block;
+  color: grey;
+  font-weight: bold;
+  font-size: 0.8em;
+}
+
+.header1 {
+  background-color: rgb(0, 17, 17);
+  padding: 0.2rem;
+}
+
+.left-header1 .amazon-logo img {
+  width: 35%;
+  padding: 0.8rem 0.4rem;
+}
+
+.left-header1 .amazon-logo img:hover {
+  outline: 0.1rem solid white;
+}
+
+#location {
+  position: absolute;
+  top: 15px;
+  left: 100px;
+  padding: 0.5rem;
+}
+
+#location:hover {
+  outline: 0.1rem solid white;
+}
+
+.left-header1 .location {
+  margin-left: 10px;
+}
+
+.left-header1 .delivery {
+  display: inline-block;
+  font-size: 15px;
+  text-decoration: none;
+}
+
+.mid-header1 {
+  margin-left: 3rem;
+}
+
+.mid-header1 button {
+  border-radius: 0.4rem;
+}
+
+.mid-header1 .search {
+  display: grid;
+  grid-auto-flow: column;
+}
+
+.mid-header1 .select_search {
+  border: none;
+  background-color: rgb(179, 177, 177);
+  text-decoration: none;
+  border-top-left-radius: 0.2rem;
+  border-bottom-left-radius: 0.2rem;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  padding: 0.4rem;
+  cursor: pointer;
+  width: 3.1rem;
+}
+
+.mid-header1 .select_search:hover {
+  background-color: #858585;
+}
+
+.mid-header1 .type_search input {
+  border: 0;
+  outline: 0;
+  padding: 0.4rem 24rem 0.4rem 0.4rem;
+  height: 1.2rem;
+  background-color: rgb(235, 235, 235);
+  font-weight: bold;
+}
+
+.mid-header1 .click_search {
+  background-color: rgb(209, 201, 90);
+  border: none;
+  border-top-left-radius: 0rem;
+  border-bottom-left-radius: 0rem;
+  border-top-right-radius: 0.2rem;
+  border-bottom-right-radius: 0.2rem;
+  padding: 0.4rem;
+  cursor: pointer;
+  margin-right: 2rem;
+}
+
+.mid-header1 .click_search:hover {
+  background-color: rgb(156, 151, 75);
+}
+
+.right-header1 {
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+}
+
+.right-header1 .right {
+  padding: 1rem;
+}
+
+.select_language {
+  background-color: rgb(0, 17, 17);
+  color: white;
+  border: none;
+  width: 20%;
+  cursor: pointer;
+}
+
+.right-header1 .cart {
+  padding: 1.2rem;
+}
+
+.right-header1 .cart:hover {
+  outline: 0.1rem solid white;
+}
+
+.right-header1 .cart a {
+  text-decoration: none;
+}
+
+.right-header1 .right:hover {
+  outline: 0.1rem solid white;
+}
+
+.right-header1 .right a {
+  text-decoration: none;
+}
+
+.country {
+  height: 1.2rem;
+  width: 2rem;
+}
+
+.header2 {
+  background-color: #383838;
+  padding: 0.4rem;
+}
+
+.left-header2 a {
+  text-decoration: none;
+  padding: 0.2rem;
+}
+
+.left-header2 a:hover {
+  outline: 0.1rem solid white;
+  box-shadow: -0.2rem -0.2rem 2rem 0.5rem rgb(0, 255, 179);
+}
+
+.left-header2 a i {
+  margin-right: 0.8rem;
+}
+
+.mid-header2 {
+  margin-right: 30rem;
+}
+
+.mid-header2 a {
+  text-decoration: none;
+  margin: 0 1rem;
+  padding: 0.2rem;
+}
+
+.mid-header2 a:hover {
+  outline: 0.1rem solid white;
+}
+
+.right-header2 a {
+  text-decoration: none;
+  padding: 0.2rem;
+}
+
+.right-header2 a:hover {
+  outline: 0.1rem solid white;
+}
+
+/* ====================================== Main section =============================== */
+
+main {
+  background-image: url("https://images.unsplash.com/photo-1516617442634-75371039cb3a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzB8fGJhY2tncm91bmQlMjBpbWFnZSUyMGZvciUyMHNob3BwaW5nJTIwd2Vic2l0ZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.main {
+  padding: 4rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+.heading_main {
+  font-size: 1.8rem;
+  font-family: cursive;
+  color: white;
+}
+
+.para_main {
+  font-size: 1rem;
+  margin: 0.4rem;
+  font-family: cursive;
+  color: white;
+}
+
+.info_amazon_para {
+  text-align: center;
+  background-color: whitesmoke;
+  padding: 1rem;
+  margin: 2rem;
+}
+
+.info_amazon_para a {
+  color: rgb(25, 97, 180);
+  text-decoration: none;
+}
+
+.info_amazon_para a:hover {
+  color: brown;
+  text-decoration: underline;
+}
+
+.grid1 {
+  display: grid;
+  grid-gap: 1rem;
+  margin: 2rem;
+
+  grid-template-rows: repeat(10, 120px);
+  grid-template-columns: repeat(4, 1fr);
+
+  grid-template-areas:
+  /* "item1 item2 item3 item4"
+    "item1 item2 item3 item5"
+    "item6 item7 item8 item9 "
+    "item6 item7 item8 item9 "
+    "item10 item10 item10 item10"
+    "item11 item11 item11 item11"; */
+    "item1 item2 item3 item4"
+    "item1 item2 item3 ."
+    "item1 item2 item3 ."
+    "item6 item7 item8 item9"
+    "item6 item7 item8 item9"
+    "item6 item7 item8 item9"
+    "item10 item10 item10 item10"
+    "item10 item10 item10 item10"
+    "item11 item11 item11 item11"
+    "item11 item11 item11 item11";
+}
+
+.head_caption {
+  font-size: 1.2rem;
+}
+
+.img_caption {
+  font-size: 0.6rem;
+  color: #413232;
+  text-decoration: none;
+}
+
+.item {
+  display: grid;
+  padding: 1rem;
+  font-weight: bold;
+  background-color: whitesmoke;
+  border: 1px solid grey;
+}
+
+.item .click_to_explore {
+  color: rgb(25, 97, 180);
+  text-decoration: none;
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+
+.item .click_to_explore:hover {
+  color: brown;
+  text-decoration: underline;
+}
+
+.item-1 {
+  grid-area: item1;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.item-1 figure img {
+  height: 8rem;
+  width: 8rem;
+  margin: 0.2rem;
+}
+
+.item-2 {
+  grid-area: item2;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.item-2 figure img {
+  height: 8rem;
+  width: 8rem;
+  margin: 0.2rem;
+}
+
+.item-3 {
+  grid-area: item3;
+  margin: 0 auto;
+}
+
+.item-3 figure img {
+  height: 18rem;
+  width: 16.91rem;
+  margin-left: 0.2rem;
+  margin-top: 0.7rem;
+}
+
+.item-4 {
+  grid-area: item4;
+  font-size: 1.2rem;
+}
+
+.item-4 button {
+  background-color: rgb(49, 71, 3);
+  color: white;
+  border: none;
+  border-radius: 0.4rem;
+  padding: 0.2rem;
+  margin-top: 0.2rem;
+  cursor: pointer;
+}
+
+.amazon_box_img {
+  display: grid;
+  justify-content: center;
+}
+
+/* .item-5 {
+  grid-area: item5;
+} */
+
+.item-6 {
+  grid-area: item6;
+  margin: 0 auto;
+}
+
+.item-6 figure img {
+  height: 18rem;
+  width: 16.91rem;
+}
+
+.item-7 {
+  grid-area: item7;
+  margin: 0 auto;
+}
+
+.item-7 figure img {
+  height: 18rem;
+  width: 16.91rem;
+}
+
+.item-8 {
+  grid-area: item8;
+  margin: 0 auto;
+}
+
+.item-8 figure img {
+  height: 12rem;
+  width: 16.91rem;
+  margin-top: 0.4rem;
+}
+
+.item-8 a {
+  width: fit-content;
+  padding: 0.2rem;
+  font-size: 0.8rem;
+  margin-top: 0.2rem;
+}
+
+.item-8 .discount {
+  color: white;
+  background-color: maroon;
+  text-decoration: none;
+  font-weight: normal;
+}
+
+.item-8 .top_deal {
+  color: maroon;
+  text-decoration: none;
+}
+
+.list_price {
+  font-size: 0.8rem;
+  font-weight: normal;
+  color: grey;
+  padding: 0.2rem 0;
+}
+
+.list_price span {
+  text-decoration: line-through;
+}
+
+.item-9 {
+  grid-area: item9;
+  margin: 0 auto;
+}
+
+.item-9 figure img {
+  height: 18rem;
+  width: 16.91rem;
+}
+
+.item-10 {
+  grid-area: item10;
+  margin: 0 auto;
+}
+
+.item-10 figure {
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+
+.item-10 figure img {
+  height: 12rem;
+  width: 15rem;
+  margin-top: 1rem;
+}
+
+.item-11 {
+  grid-area: item11;
+}
+
+.item-11 figure img {
+  height: 12rem;
+  width: 10.87rem;
+  margin-top: 1rem;
+}

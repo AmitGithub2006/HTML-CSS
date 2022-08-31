@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Amazon Clone</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script
+      src="https://kit.fontawesome.com/241a20b3c3.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- ======================= Header starts here ======================== -->
+
+    <header>
+      <div class="header1">
+        <div class="container grid">
+          <div class="left-header1">
+            <div>
+              <a class="amazon-logo" href="#"
+                ><img
+                  src="https://cdn.shopify.com/s/files/1/1250/3061/files/white-amazon-logo-png-6_1024x1024.png?v=1539106025"
+                  alt="amazon logo"
+              /></a>
+              <div id="location">
+                <a class="location" href="#"
+                  ><i class="fa-solid fa-location-dot"></i
+                ></a>
+                <a class="delivery" href="#"
+                  ><span class="span">Deliver to</span>India</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="mid-header1">
+            <div class="search">
+              <select class="select_search">
+                <option>All</option>
+                <option>Baby</option>
+                <option>Books</option>
+                <option>Deals</option>
+                <option>Automotive</option>
+                <option>Computers</option>
+                <option>Digital Music</option>
+                <option>Men's Fashion</option>
+                <option>Women's Fashion</option>
+              </select>
+              <span class="type_search">
+                <input type="text" placeholder="Search your item here..." />
+              </span>
+              <button class="click_search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
+            </div>
+          </div>
+          <div class="right-header1">
+            <div class="right flag">
+              <label for="country"
+                ><a href="#"
+                  ><img
+                    class="country"
+                    src="data:image/png;base64,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"
+                    alt="Indian flag"
+                /></a>
+              </label>
+              <select class="select_language" name="countries" id="countries">
+                <option value="">Hindi</option>
+                <option value="">French</option>
+                <option value="">Japanese</option>
+                <option value="">Chinese</option>
+                <option value="">Italian</option>
+              </select>
+            </div>
+            <div class="right">
+              <a href="#"
+                ><span class="span">Hello, Sign in</span>Account & Lists
+                <i class="fa-solid fa-caret-down"></i
+              ></a>
+            </div>
+            <div class="right">
+              <a href="#"><span class="span">Returns</span> & Orders</a>
+            </div>
+            <div class="cart">
+              <a href="#"><i class="fa-solid fa-cart-arrow-down"></i>Cart</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header2">
+        <div class="container grid">
+          <div class="left-header2">
+            <a href="#"><i class="fa-solid fa-bars"></i>All</a>
+          </div>
+          <nav class="mid-header2">
+            <a href="#">Today's Deals</a>
+            <a href="#">Costumer Service</a>
+            <a href="#">Registry</a>
+            <a href="#">Gift Cards</a>
+            <a href="#">Sell</a>
+          </nav>
+          <div class="right-header2">
+            <a href="#">Shop Father's Day Gifts</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ================================ Header ends here =================================== -->
+
+    <!-- ================================ Main Section starts here ================================== -->
+
+    <main>
+      <div class="main">
+        <h1 class="heading_main">Gifts for Dad</h1>
+        <p class="para_main">Discover everything, all for Dad</p>
+      </div>
+      <p class="info_amazon_para">
+        You are on amazon.com. You can also shop on Amazon India for millions of
+        products with fast local delivery.
+        <a href="#">Click here to visit amazon.in</a>
+      </p>
+      <section>
+        <div class="grid1">
+          <figure class="item item-1">
+            <figcaption class="head_caption">Gaming Accessories</figcaption>
+            <figure>
+              <a class="img_caption" href="#"
+                ><img
+                  src="https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8aGVhZHNldHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+                  alt="Headset"
+                />
+                <figcaption>Headsets</figcaption></a
+              >
+            </figure>
+            <figure>
+              <a class="img_caption" href="#">
+                <img
+                  src="https://images.unsplash.com/photo-1618384887929-16ec33fab9ef?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8a2V5Ym9hcmR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+                  alt="Keyboard"
+                />
+                <figcaption>Keyboards</figcaption></a
+              >
+            </figure>
+            <figure>
+              <a class="img_caption" href="#">
+                <img
+                  src="https://images.unsplash.com/photo-1636613016656-918802c9b980?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8Y29tcHV0ZXIlMjBtaWNlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                  alt="Computer Mice"
+                />
+                <figcaption>Computer Mice</figcaption></a
+              >
+            </figure>
+            <figure>
+              <a class="img_caption" href="#">
+                <img
+                  src="https://images.unsplash.com/photo-1580480055273-228ff5388ef8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8Y2hhaXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+                  alt="Chair"
+                />
+                <figcaption>Chairs</figcaption>
+              </a>
+            </figure>
+            <a class="click_to_explore" href="#">See more</a>
+          </figure>
+          <figure class="item item-2">
+            <figcaption class="head_caption">Shop by Category</figcaption>
+            <figure>
+              <a class="img_caption" href="#">
+                <img
+                  src="https://images.unsplash.com/photo-1494698853255-d0fa521abc6c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjE2fHxsYXB0b3B8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+                  alt="Laptop"
+                />
+                <figcaption>Computers & Accessories</figcaption></a
+              >
+            </figure>
+            <figure>
+              <a class="img_caption" href="#">
+                <img
+                  src="https://images.unsplash.com/photo-1592840496694-26d035b52b48?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mzd8fHZpZGVvJTIwZ2FtZXN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+                  alt="Video game"
+                />
+                <figcaption>Video Games</figcaption></a
+              >
+            </figure>
+            <figure>
+              <a class="img_caption" href="#">
+                <img
+                  src="https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8YmFieSUyMHByb2R1Y3R8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+                  alt="Baby product"
+                />
+                <figcaption>Baby</figcaption></a
+              >
+            </figure>
+            <figure>
+              <a class="img_caption" href="#">
+                <img
+                  src="https://images.unsplash.com/photo-1603558431750-dfa36513aee6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fHRveXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+                  alt="Toy"
+                />
+                <figcaption>Toys & Games</figcaption></a
+              >
+            </figure>
+            <a class="click_to_explore" href="#">Shop now</a>
+          </figure>
+          <figure class="item item-3">
+            <figcaption class="head_caption">Get Fit at Home</figcaption>
+            <figure>
+              <a href="#">
+                <img
+                  src="https://static.nike.com/a/images/f_auto,cs_srgb/w_1536,c_limit/7c72faf6-127e-4eb0-b323-a1e089c1260a/no-gym-no-problem-the-10-best-at-home-workouts-to-try-now.jpg"
+                  alt="Fit girl"
+              /></a>
+            </figure>
+            <a class="click_to_explore" href="#">Explore now</a>
+          </figure>
+          <div class="item item-4">
+            <h4>Sign-in for the Best Experience</h4>
+            <button>Sign in securely</button>
+          </div>
+          <figure class="amazon_box_img">
+            <a href="#">
+              <img
+                src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/October/Fuji_D2_45M_en_US_1x._CB418309979_.jpg"
+                alt="amazon box image"
+            /></a>
+          </figure>
+          <!-- <div class="item item-5">
+            <h4>We ship over 45 million products around the world</h4>
+          </div> -->
+          <figure class="item item-6">
+            <figcaption class="head_caption">
+              Shop Father's Day Gifts
+            </figcaption>
+            <figure>
+              <a href="#">
+                <img
+                  src="https://images.unsplash.com/photo-1607082349566-187342175e2f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjl8fHNob3BwaW5nfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                  alt="Shopping"
+              /></a>
+            </figure>
+            <a class="click_to_explore" href="#">Shop now</a>
+          </figure>
+          <figure class="item item-7">
+            <figcaption class="head_caption">Health & Personal Care</figcaption>
+            <figure>
+              <a href="#">
+                <img
+                  src="https://images.unsplash.com/photo-1522338242992-e1a54906a8da?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8ODZ8fGJlYXV0eSUyMHByb2R1Y3R8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+                  alt="beauty product"
+              /></a>
+            </figure>
+            <a class="click_to_explore" href="#">Shop now</a>
+          </figure>
+          <figure class="item item-8">
+            <figcaption class="head_caption">Deal of the Day</figcaption>
+            <figure>
+              <a href="#">
+                <img
+                  src="https://images.unsplash.com/photo-1588131153911-a4ea5189fe19?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NzJ8fHNwZWFrZXJzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                  alt=""
+              /></a>
+            </figure>
+            <pre><a class="discount" href="#">upto 50% off</a>  <a class="top_deal" href="#">Top deal</a></pre>
+
+            <p>$24.59</p>
+            <p class="list_price">
+              List price:
+              <span>$59.34</span>
+            </p>
+            <p>Aquaseric products</p>
+            <a class="click_to_explore" href="#">See all deals</a>
+          </figure>
+          <figure class="item item-9">
+            <figcaption class="head_caption">Computer & Accessories</figcaption>
+            <figure>
+              <a href="#"> </a>
+              <img
+                src="https://images.unsplash.com/photo-1622820366109-3113cfa3825d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8ODAwfHxsYXB0b3B8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+                alt="Laptop"
+              />
+            </figure>
+            <a class="click_to_explore" href="#">Shop now</a>
+          </figure>
+          <figure class="item item-10">
+            <figcaption class="head_caption">
+              Popular products in PC internationally
+            </figcaption>
+            <figure>
+              <a href="#">
+                <img
+                  src="https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mzh8fHBjJTIwcHJvZHVjdHN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+                  alt="Mouse" />
+                <img
+                  src="https://images.unsplash.com/photo-1618384887929-16ec33fab9ef?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8a2V5Ym9hcmR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+                  alt="Keyboard" />
+                <img
+                  src="https://images.unsplash.com/photo-1567094764148-bb14c3e6f14c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Y29tcHV0ZXIlMjBhY2Nlc3Nvcmllc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+                  alt="" />
+                <img
+                  src="https://images.unsplash.com/photo-1596658591534-591d75e2f2f7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8bGFwdG9wJTIwY2hhcmdlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+                  alt="" />
+                <img
+                  src="https://images.unsplash.com/photo-1526406915894-7bcd65f60845?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fGxhcHRvcCUyMGNoYXJnZXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+                  alt="" />
+                <img
+                  src="https://images.unsplash.com/photo-1572721546624-05bf65ad7679?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y2FibGV8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+                  alt="" />
+                <img
+                  src="https://images.unsplash.com/photo-1620368523635-df9d83338fc1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8bGFwdG9wJTIwY29vbGluZyUyMGZhbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+                  alt="" />
+                <img
+                  src="https://images.unsplash.com/photo-1623251609314-97cc1f84e3ed?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fGxhcHRvcCUyMHN0YW5kfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                  alt=""
+              /></a>
+            </figure>
+          </figure>
+          <figure class="item item-11">
+            <figcaption class="head_caption">
+              Frequent repurchased in Home
+            </figcaption>
+            <figure>
+              <a href="#">
+                <img
+                  src="https://images.unsplash.com/photo-1605463843865-6ac177f6b11c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NjV8fHJhY2t8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+                  alt="" />
+                <img
+                  src="https://images.unsplash.com/photo-1551232864-3f0890e580d9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cmFja3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+                  alt="" />
+                <img
+                  src="https://images.unsplash.com/photo-1541956197774-1c6c637c8776?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzF8fGJ1bGJ8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+                  alt="" />
+                <img
+                  src="https://images.unsplash.com/photo-1607631755187-298a3f9a640a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8Y2FibGV8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+                  alt="" />
+                <img
+                  src="https://images.unsplash.com/photo-1617285022124-ff59a0e1ebb7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjZ8fGxhcHRvcCUyMGFjY2Vzc29yaWVzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                  alt="" />
+                <img
+                  src="https://images.unsplash.com/photo-1601956349578-c31521587860?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fGd1aXRhcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+                  alt="" />
+                <img
+                  src="https://images.unsplash.com/photo-1628428988931-14bc33099075?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fGN1cnRhaW58ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+                  alt=""
+              /></a>
+            </figure>
+          </figure>
+        </div>
+      </section>
+    </main>
+    <!-- ================================ Main Section ends here ================================== -->
+  </body>
+</html>
